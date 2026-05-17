@@ -79,8 +79,8 @@ jobs:
         if: ${{ needs.python-unit-tests.result == 'failure' }}
         uses: dawidd6/action-send-mail@v17
         with:
-          server_address: smtp.gmail.com
-          server_port: 465
+          server_address: ${{ secrets.MAIL_HOST }}
+          server_port: ${{ secrets.MAIL_PORT }}
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
