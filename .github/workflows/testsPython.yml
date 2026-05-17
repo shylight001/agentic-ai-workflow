@@ -77,7 +77,7 @@ jobs:
 
       - name: Python Unit Tests are failed
         if: ${{ needs.python-unit-tests.result == 'failure' }}
-        uses: dawidd6/action-send-mail@v17
+        uses: dawidd6/action-send-mail@v7
         with:
           server_address: ${{ secrets.MAIL_HOST }}
           server_port: ${{ secrets.MAIL_PORT }}
